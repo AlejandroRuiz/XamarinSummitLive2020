@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="XamarinSummitLive2020.MainPage">
+    <StackLayout>
+        <Frame
+            BackgroundColor="#2196F3"
+            Padding="24"
+            CornerRadius="0">
+            <Label
+                Margin="{OnPlatform iOS='0,20,0,0', Android='0'}"
+                Text="Welcome to Xamarin.Forms!"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                FontSize="36" />
+        </Frame>
+
+        <Button
+            Clicked="OnRectangleButtonClicked"
+            Text="Rectangle" />
+        <Button
+            Clicked="OnEllipseButtonClicked"
+            Text="Ellipse" />
+        <Button
+            Clicked="OnLineButtonClicked"
+            Text="Line" />
+        <Button
+            Clicked="OnPolylineButtonClicked"
+            Text="Polyline" />
+        <Button
+            Clicked="OnPolygonButtonClicked"
+            Text="Polygon" />
+        <Button
+            Clicked="OnGeometryButtonClicked"
+            Text="Geometries" />
+        <Button
+            Clicked="OnClipsButtonClicked"
+            Text="Clips" />
+        <Button
+            Clicked="OnSvgButtonClicked"
+            Text="Svg" />
+    </StackLayout>
+</ContentPage>

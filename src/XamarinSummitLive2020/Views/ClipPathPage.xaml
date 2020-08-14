@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    Title="Clip"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSummitLive2020.Views.ClipPathPage">
+    <ScrollView
+        Padding="10,20">
+        <StackLayout
+            Spacing="20">
+
+            <Label
+                Text="Circle Image" />
+            <Image
+                Aspect="AspectFill"
+                HeightRequest="200"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Source="https://heymondo.es/blog/wp-content/uploads/2019/04/playas-de-rio-de-janeiro.jpg">
+                <Image.Clip>
+                    <EllipseGeometry
+                        RadiusX="100"
+                        RadiusY="100"
+                        Center="100,100" />
+                </Image.Clip>
+            </Image>
+
+            <Label
+                Text="Complex Shape Image" />
+            <Image
+                Aspect="AspectFill"
+                HeightRequest="300"
+                Source="https://heymondo.es/blog/wp-content/uploads/2019/04/playas-de-rio-de-janeiro.jpg">
+                <Image.Clip>
+                    <GeometryGroup>
+                        <EllipseGeometry
+                            RadiusX="100"
+                            RadiusY="100"
+                            Center="100,100" />
+                        <EllipseGeometry
+                            RadiusX="100"
+                            RadiusY="100"
+                            Center="200,100" />
+
+                        <EllipseGeometry
+                            RadiusX="100"
+                            RadiusY="100"
+                            Center="100,200" />
+                        <EllipseGeometry
+                            RadiusX="100"
+                            RadiusY="100"
+                            Center="200,200" />
+                    </GeometryGroup>
+                </Image.Clip>
+            </Image>
+
+            <Label
+                Text="Circle Button" />
+            <Button
+                BackgroundColor="Orange"
+                TextColor="White"
+                Text="Hello"
+                HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Center">
+                <Button.Clip>
+                    <EllipseGeometry
+                        RadiusX="50"
+                        RadiusY="50"
+                        Center="50,50" />
+                </Button.Clip>
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

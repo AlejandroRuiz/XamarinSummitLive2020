@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    Title="Polygon"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSummitLive2020.Views.PolygonPage">
+    <StackLayout
+        Spacing="20">
+        <Label
+            Text="Simple Polygon" />
+        <Polygon
+            HorizontalOptions="Center"
+            Points="80,10 90,80 10,50"
+            Fill="#82D25E"
+            Stroke="#5BA33B"
+            StrokeThickness="5" />
+
+        <Label
+            Text="Polygon with Fill Rule" />
+        <Polygon
+            HorizontalOptions="Center"
+            Points="0,48 0,144 96,150 100,0 192,0 192,96 50,96 48,192 150,200 144,48"
+            Fill="#82D25E"
+            Stroke="#5BA33B"
+            FillRule="Nonzero"
+            StrokeThickness="5" />
+    </StackLayout>
+</ContentPage>

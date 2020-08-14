@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    Title="Geometries"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSummitLive2020.Views.GeometriesPage">
+    <ScrollView
+        Padding="10,20">
+        <StackLayout
+            Spacing="20">
+            <Label
+                Text="Ellipse Geometry" />
+            <Path
+                HorizontalOptions="Center"
+                Fill="#82D25E"
+                Stroke="#5BA33B"
+                StrokeThickness="5">
+                <Path.Data>
+                    <EllipseGeometry
+                        Center="50,50"
+                        RadiusX="50"
+                        RadiusY="50" />
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="Line Geometry" />
+            <Path
+                HorizontalOptions="Center"
+                Stroke="#5BA33B"
+                StrokeThickness="5">
+                <Path.Data>
+                    <LineGeometry
+                        StartPoint="10,20"
+                        EndPoint="100,130" />
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="Rectangle Geometry" />
+            <Path
+                HorizontalOptions="Center"
+                Fill="#82D25E"
+                Stroke="#5BA33B"
+                StrokeThickness="5">
+                <Path.Data>
+                    <RectangleGeometry
+                        Rect="10,10,150,100" />
+                </Path.Data>
+            </Path>
+
+            <Label
+                FontAttributes="Bold"
+                Text="Path Geometries" />
+            <Label
+                Text="Bezier Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="5">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure
+                                    StartPoint="10,10">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <BezierSegment
+                                                Point1="100,0"
+                                                Point2="200,200"
+                                                Point3="300,10" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="Line Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="5"
+                HorizontalOptions="Center">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure
+                                    IsClosed="True"
+                                    StartPoint="10,100">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <LineSegment
+                                                Point="100,100" />
+                                            <LineSegment
+                                                Point="100,50" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="PolyBezier Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="5"
+                HorizontalOptions="Center">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure
+                                    StartPoint="10,10">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <PolyBezierSegment
+                                                Points="0,0 100,0 150,100 150,0 200,0 300,10" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="PolyLine Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="5"
+                HorizontalOptions="Center">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure
+                                StartPoint="10,10">
+                                <PathFigure.Segments>
+                                    <PolyLineSegment
+                                        Points="50,10 50,50" />
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="PolyQuadraticBezier Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="2">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure
+                                    StartPoint="10,10">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <PolyQuadraticBezierSegment
+                                                Points="100,100 150,50 0,100 15,200" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Label
+                Text="QuadraticBezier Segment" />
+            <Path
+                Stroke="#5BA33B"
+                StrokeThickness="5">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure
+                                    StartPoint="10,10">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <QuadraticBezierSegment
+                                                Point1="200,200"
+                                                Point2="300,10" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

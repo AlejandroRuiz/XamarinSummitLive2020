@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    Title="Polyline"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSummitLive2020.Views.PolylinePage">
+    <StackLayout
+        Spacing="20">
+        <Label
+            Text="Simple Polyline" />
+        <Polyline
+            HorizontalOptions="Center"
+            Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
+            Stroke="OrangeRed"
+            StrokeThickness="1" />
+
+        <Label
+            Text="Chart Polyline" />
+        <Grid
+            HorizontalOptions="Center"
+            HeightRequest="200"
+            WidthRequest="300">
+
+            <Polyline
+                Fill="OrangeRed"
+                Stroke="Black"
+                StrokeThickness="1"
+                Points="20,200 80,180 100,150 200,100 220,30 280,170 290,190, 300,200" />
+
+            <Polyline
+                Stroke="Black"
+                StrokeThickness="2"
+                Points="0,200 300,200 300,0" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

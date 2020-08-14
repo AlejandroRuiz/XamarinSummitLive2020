@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    Title="Line"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSummitLive2020.Views.LinePage">
+    <StackLayout
+        Spacing="20">
+        <Label
+            Text="Simple Line" />
+        <Line
+            Stroke="OrangeRed"
+            StrokeThickness="5"
+            X1="0"
+            Y1="0"
+            X2="50"
+            Y2="100"
+            StrokeLineCap="Round"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Simple Dashed Line" />
+        <Line
+            Stroke="OrangeRed"
+            X1="50"
+            Y1="0"
+            X2="0"
+            Y2="100"
+            StrokeThickness="5"
+            StrokeDashArray="1,1"
+            StrokeDashOffset="5"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Simple Ellipse with Dashed Corner" />
+        <StackLayout
+            HorizontalOptions="Center"
+            Orientation="Horizontal">
+            <Line
+                StrokeThickness="20"
+                X1="0"
+                Y1="0"
+                X2="0"
+                Y2="100"
+                Stroke="#82D25E" />
+            <Line
+                StrokeThickness="20"
+                X1="10"
+                Y1="50"
+                X2="10"
+                Y2="100"
+                Stroke="#5BA33B" />
+
+            <Line
+                StrokeThickness="20"
+                X1="10"
+                Y1="20"
+                X2="10"
+                Y2="100"
+                Stroke="#82D25E" />
+            <Line
+                StrokeThickness="20"
+                X1="10"
+                Y1="80"
+                X2="10"
+                Y2="100"
+                Stroke="#5BA33B" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
